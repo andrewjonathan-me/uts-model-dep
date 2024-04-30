@@ -45,8 +45,6 @@ def main():
     
 
 def make_prediction(features):
-    # Use the loaded model to make predictions
-    # Replace this with the actual code for your model
     input_array = np.array(features).reshape(1, -1)
     prediction = model.predict(input_array)
     return "Churn" if prediction[0] == 0 else "Not Churned"
