@@ -51,7 +51,7 @@ def main():
 def make_prediction(features):
     input_array = np.array(features).reshape(1, -1)
     prediction = model.predict(input_array)
-    return "Not Churned" if prediction[1] == 0 else "Churned"
+    return "Not Churned" if prediction[0] == 0 else "Churned"
 
 if __name__ == '__main__':
     main()
